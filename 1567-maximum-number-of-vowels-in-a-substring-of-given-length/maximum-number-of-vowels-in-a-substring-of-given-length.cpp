@@ -4,23 +4,21 @@ public:
         int counter = 0;
         for (int i = 0; i < k; i++) {
             char h = s[i];
-            if(isVovel(h)==true){
+            if (isVovel(h) == true) {
                 counter++;
             }
         }
         int maxCounter = counter;
 
-        for(int m = k; m<s.size();m++){
-            if(isVovel(s[m-k])==false && isVovel(s[m])==true){
+        for (int m = k; m < s.size(); m++) {
+            if (isVovel(s[m - k]) == false && isVovel(s[m]) == true) {
                 counter++;
-            }
-            else if(isVovel(s[m-k])==true && isVovel(s[m])==false){
+            } else if (isVovel(s[m - k]) == true && isVovel(s[m]) == false) {
                 counter--;
             }
-            maxCounter = max(maxCounter,counter);
+            maxCounter = max(maxCounter, counter);
         }
         return maxCounter;
-
     }
 
 private:
