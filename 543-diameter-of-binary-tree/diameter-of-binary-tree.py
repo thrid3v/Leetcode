@@ -14,9 +14,8 @@ class Solution:
             
             left_h = dfs(root.left)
             right_h = dfs(root.right)
-            curr_res = left_h + right_h
 
-            self.res = max(curr_res, self.res)
+            self.res = max(left_h + right_h, self.res)
             return 1 + max(left_h, right_h)
 
         dfs(root)
