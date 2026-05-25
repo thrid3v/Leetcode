@@ -1,18 +1,16 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         res = []
-        csum = []
-        nums = candidates 
-        
+        csum = []    
         def dfs(i, t):
             if t == target:
                 res.append(csum.copy())
                 return 
-            if t > target or i == len(nums):
+            if t > target or i == len(candidates):
                 return 
             
-            csum.append(nums[i])
-            dfs(i,t + nums[i])
+            csum.append(candidates[i])
+            dfs(i,t + candidates[i])
 
             csum.pop()
             dfs(i + 1, t)
