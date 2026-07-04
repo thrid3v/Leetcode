@@ -20,4 +20,4 @@ class Solution:
                 q.append((node.left, level + 1))
             if node.right:
                 q.append((node.right, level + 1))
-        return
+        return 0
