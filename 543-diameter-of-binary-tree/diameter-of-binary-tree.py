@@ -16,7 +16,7 @@ class Solution:
             right = dfs(node.right)
             self.res = max(self.res, left + right)
             return 1 + max(left, right)
-        sol = dfs(root)
+        dfs(root)
         return self.res
 
 
